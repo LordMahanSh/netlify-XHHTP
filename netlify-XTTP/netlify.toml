@@ -1,18 +1,5 @@
-[functions]
-  node_bundler = "none"
-  edge_handler = "proxy"
-
-[build]
-  command = "echo 'No build needed'"
-  publish = "."
+# netlify.toml - Clean version for Edge Functions only
 
 [[edge_functions]]
   path = "/*"
   function = "proxy"
-
-[headers]
-  for = "/*"
-  [headers.values]
-    Cache-Control = "no-cache, no-store, must-revalidate"
-    X-Robots-Tag = "noindex, nofollow"
-    Referrer-Policy = "no-referrer"
